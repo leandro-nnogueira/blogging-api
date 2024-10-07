@@ -41,6 +41,7 @@ public class Controller {
         return new ResponseEntity<>(newPost, HttpStatus.CREATED);
     }
 
+    // Update post
     @PutMapping("/{id}")
     public ResponseEntity<Post> update(@PathVariable Long id, @RequestBody Post post) {
         Post existingPost = service.findById(id);
